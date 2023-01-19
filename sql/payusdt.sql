@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 19/01/2023 16:46:50
+ Date: 19/01/2023 17:29:16
 */
 
 SET NAMES utf8mb4;
@@ -67,7 +67,7 @@ CREATE TABLE `fa_admin_log` (
   `createtime` bigint(16) DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `name` (`username`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=337 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT COMMENT='管理员日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=341 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT COMMENT='管理员日志表';
 
 -- ----------------------------
 -- Records of fa_admin_log
@@ -409,6 +409,10 @@ INSERT INTO `fa_admin_log` VALUES (333, 1, 'admin', '/EIzjFDGxCM.php/auth/rule/e
 INSERT INTO `fa_admin_log` VALUES (334, 1, 'admin', '/EIzjFDGxCM.php/auth/rule/edit/ids/173?dialog=1', '权限管理 / 权限菜单 / 编辑', '{\"dialog\":\"1\",\"__token__\":\"***\",\"row\":{\"ismenu\":\"1\",\"pid\":\"109\",\"name\":\"yunyin\\/udun\",\"title\":\"钱包配置\",\"url\":\"\",\"icon\":\"fa fa-circle-o\",\"condition\":\"\",\"menutype\":\"addtabs\",\"extend\":\"\",\"remark\":\"\",\"weigh\":\"0\",\"status\":\"normal\"},\"ids\":\"173\"}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1673883453);
 INSERT INTO `fa_admin_log` VALUES (335, 1, 'admin', '/EIzjFDGxCM.php/index/login?url=%2FEIzjFDGxCM.php%2Fauth%2Frule%3Fref%3Daddtabs', '登录', '{\"url\":\"\\/EIzjFDGxCM.php\\/auth\\/rule?ref=addtabs\",\"__token__\":\"***\",\"username\":\"admin\",\"password\":\"***\",\"captcha\":\"iyt4\"}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1674116063);
 INSERT INTO `fa_admin_log` VALUES (336, 1, 'admin', '/EIzjFDGxCM.php/general.config/edit', '系统设置 / 基础配置 / 编辑', '{\"__token__\":\"***\",\"row\":{\"name\":\"PAYUSDT\",\"beian\":\"是一款基于FastAdmin框架的一款USDT收款系统\",\"version\":\"1.0.1\",\"timezone\":\"Asia\\/Shanghai\",\"forbiddenip\":\"\",\"languages\":\"{&quot;backend&quot;:&quot;zh-cn&quot;,&quot;frontend&quot;:&quot;zh-cn&quot;}\",\"fixedpage\":\"dashboard\",\"invite_url\":\"https:\\/\\/test.esharecenter.com\\/\"}}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1674117157);
+INSERT INTO `fa_admin_log` VALUES (337, 1, 'admin', '/EIzjFDGxCM.php/general/config/del', '系统设置 / 基础配置 / 删除', '{\"name\":\"invite_url\"}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1674119178);
+INSERT INTO `fa_admin_log` VALUES (338, 1, 'admin', '/EIzjFDGxCM.php/general.config/edit', '系统设置 / 基础配置 / 编辑', '{\"__token__\":\"***\",\"row\":{\"categorytype\":\"{&quot;default&quot;:&quot;默认&quot;,&quot;page&quot;:&quot;单页&quot;,&quot;article&quot;:&quot;文章&quot;,&quot;test&quot;:&quot;Test&quot;}\",\"configgroup\":\"{&quot;basic&quot;:&quot;基础配置&quot;,&quot;dictionary&quot;:&quot;字典配置&quot;}\",\"attachmentcategory\":\"{&quot;category1&quot;:&quot;分类一&quot;,&quot;category2&quot;:&quot;分类二&quot;,&quot;custom&quot;:&quot;自定义&quot;}\"}}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1674119194);
+INSERT INTO `fa_admin_log` VALUES (339, 1, 'admin', '/EIzjFDGxCM.php/general/config/check', '系统设置 / 基础配置', '{\"row\":{\"name\":\"notify_url\"}}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1674119208);
+INSERT INTO `fa_admin_log` VALUES (340, 1, 'admin', '/EIzjFDGxCM.php/general.config/add', '系统设置 / 基础配置 / 添加', '{\"__token__\":\"***\",\"row\":{\"group\":\"basic\",\"type\":\"string\",\"name\":\"notify_url\",\"title\":\"回调地址\",\"setting\":{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"},\"value\":\"\",\"content\":\"value1|title1\\r\\nvalue2|title2\",\"tip\":\"\",\"rule\":\"\",\"visible\":\"\",\"extend\":\"\"}}', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 1674119211);
 COMMIT;
 
 -- ----------------------------
@@ -675,102 +679,6 @@ INSERT INTO `fa_category` VALUES (13, 0, 'test', '测试2', 'test2', 'recommend'
 COMMIT;
 
 -- ----------------------------
--- Table structure for fa_config
--- ----------------------------
-DROP TABLE IF EXISTS `fa_config`;
-CREATE TABLE `fa_config` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '变量名',
-  `group` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '分组',
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '变量标题',
-  `tip` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '变量描述',
-  `type` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '类型:string,text,int,bool,array,datetime,date,file',
-  `visible` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '可见条件',
-  `value` text COLLATE utf8mb4_unicode_ci COMMENT '变量值',
-  `content` text COLLATE utf8mb4_unicode_ci COMMENT '变量字典数据',
-  `rule` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '验证规则',
-  `extend` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '扩展属性',
-  `setting` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '配置',
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE KEY `name` (`name`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT COMMENT='系统配置';
-
--- ----------------------------
--- Records of fa_config
--- ----------------------------
-BEGIN;
-INSERT INTO `fa_config` VALUES (1, 'name', 'basic', 'Site name', '请填写站点名称', 'string', '', 'PAYUSDT', '', 'required', '', NULL);
-INSERT INTO `fa_config` VALUES (2, 'beian', 'basic', 'Beian', '粤ICP备15000000号-1', 'string', '', '是一款基于FastAdmin框架的一款USDT收款系统', '', '', '', NULL);
-INSERT INTO `fa_config` VALUES (3, 'cdnurl', 'basic', 'Cdn url', '如果全站静态资源使用第三方云储存请配置该值', 'string', '', '', '', '', '', '');
-INSERT INTO `fa_config` VALUES (4, 'version', 'basic', 'Version', '如果静态资源有变动请重新配置该值', 'string', '', '1.0.1', '', 'required', '', NULL);
-INSERT INTO `fa_config` VALUES (5, 'timezone', 'basic', 'Timezone', '', 'string', '', 'Asia/Shanghai', '', 'required', '', NULL);
-INSERT INTO `fa_config` VALUES (6, 'forbiddenip', 'basic', 'Forbidden ip', '一行一条记录', 'text', '', '', '', '', '', NULL);
-INSERT INTO `fa_config` VALUES (7, 'languages', 'basic', 'Languages', '', 'array', '', '{\"backend\":\"zh-cn\",\"frontend\":\"zh-cn\"}', '', 'required', '', NULL);
-INSERT INTO `fa_config` VALUES (8, 'fixedpage', 'basic', 'Fixed page', '请尽量输入左侧菜单栏存在的链接', 'string', '', 'dashboard', '', 'required', '', NULL);
-INSERT INTO `fa_config` VALUES (9, 'categorytype', 'dictionary', 'Category type', '', 'array', '', '{\"default\":\"默认\",\"page\":\"单页\",\"article\":\"文章\",\"test\":\"Test\"}', '', '', '', NULL);
-INSERT INTO `fa_config` VALUES (10, 'configgroup', 'dictionary', 'Config group', '', 'array', '', '{\"basic\":\"基础配置\",\"dictionary\":\"字典配置\",\"qiniu\":\"七牛云\",\"kefu\":\"客服设置\"}', '', '', '', NULL);
-INSERT INTO `fa_config` VALUES (11, 'mail_type', 'email', 'Mail type', '选择邮件发送方式', 'select', '', '1', '[\"请选择\",\"SMTP\"]', '', '', '');
-INSERT INTO `fa_config` VALUES (12, 'mail_smtp_host', 'email', 'Mail smtp host', '错误的配置发送邮件会导致服务器超时', 'string', '', 'smtp.qq.com', '', '', '', '');
-INSERT INTO `fa_config` VALUES (13, 'mail_smtp_port', 'email', 'Mail smtp port', '(不加密默认25,SSL默认465,TLS默认587)', 'string', '', '465', '', '', '', '');
-INSERT INTO `fa_config` VALUES (14, 'mail_smtp_user', 'email', 'Mail smtp user', '（填写完整用户名）', 'string', '', '10000', '', '', '', '');
-INSERT INTO `fa_config` VALUES (15, 'mail_smtp_pass', 'email', 'Mail smtp password', '（填写您的密码或授权码）', 'string', '', 'password', '', '', '', '');
-INSERT INTO `fa_config` VALUES (16, 'mail_verify_type', 'email', 'Mail vertify type', '（SMTP验证方式[推荐SSL]）', 'select', '', '2', '[\"无\",\"TLS\",\"SSL\"]', '', '', '');
-INSERT INTO `fa_config` VALUES (17, 'mail_from', 'email', 'Mail from', '', 'string', '', '10000@qq.com', '', '', '', '');
-INSERT INTO `fa_config` VALUES (18, 'attachmentcategory', 'dictionary', 'Attachment category', '', 'array', '', '{\"category1\":\"分类一\",\"category2\":\"分类二\",\"custom\":\"自定义\"}', '', '', '', NULL);
-INSERT INTO `fa_config` VALUES (19, 'accessKey', 'qiniu', 'accessKey', '', 'string', '', 'WZ7KXntCgogw0K8zLZavMbMErvWso1KwuIsNlg4r', '', 'required', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (20, 'secretKey', 'qiniu', 'secretKey', '', 'string', '', 'DvuzyH3R7_2ZSHX7ZTso60X3miz4U3L5YFDMaPU-', '', 'required', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (21, 'bucket', 'qiniu', 'bucket', '', 'string', '', 'esharei', '', 'required', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (22, 'domain', 'qiniu', '空间域名', '', 'string', '', 'https://img.esharecenter.com/', '', 'required', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (23, 'service_tg', 'kefu', '客服TG', '', 'string', '', 'https://www.vultr.com/', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (24, 'service_whatsapp', 'kefu', '客服Whatsapp', '', 'string', '', 'https://www.baidu.com/', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (25, 'tggroup', 'kefu', 'telegram群组地址', '', 'string', '', '', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (26, 'whatsappgroup', 'kefu', 'whatsapp群组地址', '', 'string', '', '', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (27, 'gmail', 'kefu', 'Gmail地址', '', 'string', '', '', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (28, 'invite_url', 'basic', '分享注册地址', '', 'string', '', 'https://test.esharecenter.com/', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-INSERT INTO `fa_config` VALUES (29, 'tg_channel', 'kefu', 'TG频道链接', '', 'string', '', '', '', '', '', '{\"table\":\"\",\"conditions\":\"\",\"key\":\"\",\"value\":\"\"}');
-COMMIT;
-
--- ----------------------------
--- Table structure for fa_ems
--- ----------------------------
-DROP TABLE IF EXISTS `fa_ems`;
-CREATE TABLE `fa_ems` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `event` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '事件',
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '邮箱',
-  `code` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '验证码',
-  `times` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '验证次数',
-  `ip` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'IP',
-  `createtime` bigint(16) DEFAULT NULL COMMENT '创建时间',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT COMMENT='邮箱验证码表';
-
--- ----------------------------
--- Table structure for fa_gmail
--- ----------------------------
-DROP TABLE IF EXISTS `fa_gmail`;
-CREATE TABLE `fa_gmail` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `account` varchar(50) DEFAULT NULL COMMENT '邮箱账号',
-  `pwd` varchar(50) DEFAULT NULL COMMENT '密码',
-  `name` varchar(50) DEFAULT NULL COMMENT '发过去给对方看到的名称',
-  `authcode` varchar(50) DEFAULT NULL COMMENT '授权码',
-  `nums` int(11) DEFAULT '0' COMMENT '发送次数',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='邮箱设置';
-
--- ----------------------------
--- Records of fa_gmail
--- ----------------------------
-BEGIN;
-INSERT INTO `fa_gmail` VALUES (1, 'esharecenter1@gmail.com', NULL, 'esharecenter1', 'qtiyjyeixvmoutby', 12);
-INSERT INTO `fa_gmail` VALUES (2, 'esharecenter2@gmail.com', NULL, 'esharecenter2', 'koejadkprumwwwaa', 12);
-INSERT INTO `fa_gmail` VALUES (3, 'esharecenter3@gmail.com', NULL, 'esharecenter3', 'cweslvveqgaepfer', 11);
-INSERT INTO `fa_gmail` VALUES (4, 'esharecenter4@gmail.com', NULL, 'esharecenter4', 'mdkchrftzudhnbsz', 11);
-INSERT INTO `fa_gmail` VALUES (5, 'esharecenter5@gmail.com', NULL, 'esharecenter5', 'fajmfbqswrcyrclj', 12);
-COMMIT;
-
--- ----------------------------
 -- Table structure for fa_recharge_usdt
 -- ----------------------------
 DROP TABLE IF EXISTS `fa_recharge_usdt`;
@@ -943,114 +851,6 @@ INSERT INTO `fa_recharge_usdt_log` VALUES (49, 86, 8, 0.1000, 12453000.00, '5f3d
 INSERT INTO `fa_recharge_usdt_log` VALUES (50, 86, 421, 8.0000, 12453000.00, '5f3d556ed03438620b04cfc9caf6632651ca756061490a8a83d3bff74470078c', 1673761269, '人工处理充值未找到用户：', 3, 1, '1055277345908518912', '161230105140634186507', 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t');
 INSERT INTO `fa_recharge_usdt_log` VALUES (51, 86, 8, 8.0000, 12453000.00, '5f3d556ed03438620b04cfc9caf6632651ca756061490a8a83d3bff74470078c', 1673761305, '', 3, 1, '1055277345908518912', '169230105162623039119', 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t');
 INSERT INTO `fa_recharge_usdt_log` VALUES (52, 86, 0, 8.0000, 12453000.00, '5f3d556ed03438620b04cfc9caf6632651ca756061490a8a83d3bff74470078c', 1673761324, '未找到充值用户', 3, 1, '1055277345908518912', '103230106092314414015', 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t');
-COMMIT;
-
--- ----------------------------
--- Table structure for fa_test
--- ----------------------------
-DROP TABLE IF EXISTS `fa_test`;
-CREATE TABLE `fa_test` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `user_id` int(10) DEFAULT '0' COMMENT '会员ID',
-  `admin_id` int(10) DEFAULT '0' COMMENT '管理员ID',
-  `category_id` int(10) unsigned DEFAULT '0' COMMENT '分类ID(单选)',
-  `category_ids` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '分类ID(多选)',
-  `tags` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '标签',
-  `week` enum('monday','tuesday','wednesday') COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '星期(单选):monday=星期一,tuesday=星期二,wednesday=星期三',
-  `flag` set('hot','index','recommend') COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '标志(多选):hot=热门,index=首页,recommend=推荐',
-  `genderdata` enum('male','female') COLLATE utf8mb4_unicode_ci DEFAULT 'male' COMMENT '性别(单选):male=男,female=女',
-  `hobbydata` set('music','reading','swimming') COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '爱好(多选):music=音乐,reading=读书,swimming=游泳',
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '标题',
-  `content` text COLLATE utf8mb4_unicode_ci COMMENT '内容',
-  `image` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '图片',
-  `images` varchar(1500) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '图片组',
-  `attachfile` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '附件',
-  `keywords` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '关键字',
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '描述',
-  `city` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '省市',
-  `json` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '配置:key=名称,value=值',
-  `multiplejson` varchar(1500) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '二维数组:title=标题,intro=介绍,author=作者,age=年龄',
-  `price` decimal(10,2) unsigned DEFAULT '0.00' COMMENT '价格',
-  `views` int(10) unsigned DEFAULT '0' COMMENT '点击',
-  `workrange` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '时间区间',
-  `startdate` date DEFAULT NULL COMMENT '开始日期',
-  `activitytime` datetime DEFAULT NULL COMMENT '活动时间(datetime)',
-  `year` year(4) DEFAULT NULL COMMENT '年',
-  `times` time DEFAULT NULL COMMENT '时间',
-  `refreshtime` bigint(16) DEFAULT NULL COMMENT '刷新时间',
-  `createtime` bigint(16) DEFAULT NULL COMMENT '创建时间',
-  `updatetime` bigint(16) DEFAULT NULL COMMENT '更新时间',
-  `deletetime` bigint(16) DEFAULT NULL COMMENT '删除时间',
-  `weigh` int(10) DEFAULT '0' COMMENT '权重',
-  `switch` tinyint(1) DEFAULT '0' COMMENT '开关',
-  `status` enum('normal','hidden') COLLATE utf8mb4_unicode_ci DEFAULT 'normal' COMMENT '状态',
-  `state` enum('0','1','2') COLLATE utf8mb4_unicode_ci DEFAULT '1' COMMENT '状态值:0=禁用,1=正常,2=推荐',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT COMMENT='测试表';
-
--- ----------------------------
--- Records of fa_test
--- ----------------------------
-BEGIN;
-INSERT INTO `fa_test` VALUES (1, 1, 1, 12, '12,13', '互联网,计算机', 'monday', 'hot,index', 'male', 'music,reading', '我是一篇测试文章', '<p>我是测试内容</p>', '/assets/img/avatar.png', '/assets/img/avatar.png,/assets/img/qrcode.png', '/assets/img/avatar.png', '关键字', '描述', '广西壮族自治区/百色市/平果县', '{\"a\":\"1\",\"b\":\"2\"}', '[{\"title\":\"标题一\",\"intro\":\"介绍一\",\"author\":\"小明\",\"age\":\"21\"}]', 0.00, 0, '2020-10-01 00:00:00 - 2021-10-31 23:59:59', '2017-07-10', '2017-07-10 18:24:45', 2017, '18:24:45', 1491635035, 1491635035, 1491635035, NULL, 0, 1, 'normal', '1');
-COMMIT;
-
--- ----------------------------
--- Table structure for fa_user
--- ----------------------------
-DROP TABLE IF EXISTS `fa_user`;
-CREATE TABLE `fa_user` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '组别ID',
-  `username` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '用户名',
-  `nickname` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '昵称',
-  `password` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '密码',
-  `salt` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '密码盐',
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '电子邮箱',
-  `area` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '地区',
-  `mobile` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '手机号',
-  `qq` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '/assets/files/default-avatar.png' COMMENT '头像',
-  `level` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '等级',
-  `gender` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '性别',
-  `birthday` date DEFAULT NULL COMMENT '生日',
-  `bio` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '格言',
-  `money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '我的余额',
-  `expendmoney` decimal(10,2) DEFAULT '0.00' COMMENT '消费金额',
-  `yongjin` decimal(10,2) DEFAULT '0.00' COMMENT '我的佣金',
-  `score` int(10) NOT NULL DEFAULT '0' COMMENT '积分',
-  `successions` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '连续登录天数',
-  `maxsuccessions` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '最大连续登录天数',
-  `prevtime` int(10) DEFAULT NULL COMMENT '上次登录时间',
-  `logintime` int(10) DEFAULT NULL COMMENT '登录时间',
-  `loginip` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '登录IP',
-  `loginfailure` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '失败次数',
-  `joinip` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '加入IP',
-  `jointime` int(10) DEFAULT NULL COMMENT '加入时间',
-  `createtime` int(10) DEFAULT NULL COMMENT '创建时间',
-  `updatetime` int(10) DEFAULT NULL COMMENT '更新时间',
-  `token` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'Token',
-  `status` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '状态',
-  `verification` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT '验证',
-  `vip` tinyint(4) DEFAULT '0' COMMENT '是否vip',
-  `endvip` int(11) DEFAULT '0' COMMENT '到期时间',
-  PRIMARY KEY (`id`),
-  KEY `username` (`username`),
-  KEY `email` (`email`),
-  KEY `mobile` (`mobile`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='会员表';
-
--- ----------------------------
--- Records of fa_user
--- ----------------------------
-BEGIN;
-INSERT INTO `fa_user` VALUES (1, 1, 'admin', 'admin', '86cc5cdaa504c6e9275d0fecae8ad21b', '509b4c', 'admin@163.com', NULL, '13888888888', NULL, 'http://local.acg.com/assets/img/avatar.png', 0, 0, '2017-04-08', '', 0.00, 0.00, 0.00, 0, 1, 1, 1491635035, 1491635035, '127.0.0.1', 0, '127.0.0.1', 1491635035, 0, 1491635035, '', 'normal', '', 0, 0);
-INSERT INTO `fa_user` VALUES (2, 0, 'dddddd', 'dddddd', '04fd89742558c29a1b16b5277ab15ae8', 'vMO0bA', 'ddd@dd.com', NULL, '19980734997', NULL, '', 1, 0, NULL, '', 13.40, 0.00, 0.00, 0, 1, 2, 1651590922, 1651763782, '127.0.0.1', 0, '127.0.0.1', 1651467569, 1651467569, 1651763782, '', 'normal', '', 0, 0);
-INSERT INTO `fa_user` VALUES (3, 0, 'eeeeee', 'eeeeee', 'aaa4eaa3015ee50e821f3e2e93337330', 'eNcO3i', '2705763608@qq.com', NULL, '', NULL, '', 1, 0, NULL, '', 0.00, 0.00, 0.00, 0, 1, 1, 1652714905, 1652714905, '127.0.0.1', 0, '127.0.0.1', 1652714905, 1652714905, 1652714905, '', 'normal', '', 0, 0);
-INSERT INTO `fa_user` VALUES (4, 0, 'xxxxxx', '', '08ef33602e72f3ada68567c0c906be69', '0N2EI7', '', NULL, '', '', '/uploads/20220518/79df0d73b99f580b75082c98cec867df.png', 1, 0, NULL, '', 199.00, 0.00, 0.00, 0, 3, 3, 1652887312, 1652888183, '127.0.0.1', 0, '127.0.0.1', 1652714985, 1652714985, 1652888183, '', 'normal', '', 1, 0);
-INSERT INTO `fa_user` VALUES (5, 0, 'dddd', 'dddd', 'cee15f64c996c957b7f594c8a226af35', 'ofvbNT', '2705763e608@qq.com', NULL, '', NULL, '', 1, 0, NULL, '', 1.00, 0.00, 0.00, 0, 2, 2, 1664892365, 1664944881, '127.0.0.1', 0, '127.0.0.1', 1653920685, 1653920685, 1664944881, '', 'normal', '', 1, 0);
-INSERT INTO `fa_user` VALUES (6, 0, 'test111', 'test111', '41b753899735597bfc2c0470dddc5e33', 'y3rd9I', 'ssong4008@gmail.com', NULL, '', NULL, '', 1, 0, NULL, '', 0.00, 0.00, 0.00, 0, 1, 1, 1671341902, 1671716602, '127.0.0.1', 0, '127.0.0.1', 1671336102, 1671336103, 1671716602, '', 'normal', '', 0, 0);
-INSERT INTO `fa_user` VALUES (7, 0, 'ddddddx', 'ddddddx', 'e880ee694081520dc3bcac12239f1695', 'jw49Pc', 'ddd@ss.com', NULL, '', NULL, '', 1, 0, NULL, '', 0.00, 0.00, 0.00, 0, 1, 1, 1671342602, 1671342602, '127.0.0.1', 0, '127.0.0.1', 1671342602, 1671342602, 1671342602, '', 'normal', '', 0, 0);
 COMMIT;
 
 -- ----------------------------
